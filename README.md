@@ -40,5 +40,5 @@ or
 *****
 $>python covid_suspicion.py <<Your/patient symptom statement goes here>>
 *******
-
+e.g. $> python covid_suspicion.py I have a fever and a headache
 
