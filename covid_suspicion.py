@@ -109,12 +109,13 @@ def main():
         probability = suspicion(symptoms)
 
     else:
-        arguments = list(set(sys.argv))
+        arguments = sys.argv
         arguments.remove(arguments[0])
+        # removing duplicate tokenz
+        arguments = list(set(arguments))
         for word in arguments:
             if word in stopwords:
                 arguments.remove(word)
-        print(str(arguments))
         probability = suspicion(arguments)
     if (probability>30):
         print("Definitely CoVID-19")
